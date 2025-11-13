@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Courses App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="entrance">Вход</string>
+    <string name="email">Email</string>
+    <string name="example_gmail_com">example@gmail.com</string>
+    <string name="password">Пароль</string>
+    <string name="enter_the_password">Введите пароль</string>
+    <string name="do_not_have_an_account">Нету аккаунта?</string>
+    <string name="registration">Регитрация</string>
+    <string name="forgot_my_password">Забыл пароль</string>
 </resources>
