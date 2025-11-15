@@ -10,4 +10,7 @@
     <string name="do_not_have_an_account">Нету аккаунта?</string>
     <string name="registration">Регитрация</string>
     <string name="forgot_my_password">Забыл пароль</string>
+    <string name="home">Home</string>
+    <string name="favourites">Favourites</string>
+    <string name="account">Account</string>
 </resources>

@@ -15,6 +15,8 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.navOptions
 import com.aleksey_bakhtin.coursesapp.R
 import com.aleksey_bakhtin.coursesapp.databinding.FragmentSignInBinding
 import com.aleksey_bakhtin.coursesapp.fragments.viewmodels.SignInViewModel
@@ -91,6 +93,16 @@ class SignInFragment : Fragment() {
         })
 
         bSignIn.setOnClickListener {
+            //При переходе к самому приложению отчищаем стэк навигации
+            findNavController().navigate(
+                resId = R.id.action_signInFragment_to_tabsFragment,
+                args = null,
+                navOptions = navOptions {
+                    popUpTo(R.id.signInFragment){
+                        inclusive = true
+                    }
+                }
+            )
         }
 
        bVk.setOnClickListener {

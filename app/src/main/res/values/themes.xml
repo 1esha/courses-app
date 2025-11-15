@@ -6,8 +6,7 @@
         <item name="android:textColorHint">@color/primary</item>
         <item name="colorPrimary">@color/primary</item>
         <item name="android:windowLightStatusBar">true</item>
-      
-
+        <item name="colorSecondaryContainer">@color/background_text_input</item>
     </style>
 
     <style name="Theme.CoursesApp" parent="Base.Theme.CoursesApp" />
@@ -16,5 +15,10 @@
 
         <item name="android:textColorHint">@color/text_secondary</item>
 
+    </style>
+    
+    <style name="BottomNavigationStyle" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemBackground">@color/background_accent</item>
+        <item name="itemRippleColor">@color/primary</item>
     </style>
 </resources>
