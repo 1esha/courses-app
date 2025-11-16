@@ -17,6 +17,8 @@ koin_version = "2.2.3"
 coroutines_version = "1.10.2"
 retrofit_version = "3.0.0"
 recyclerview = "1.4.0"
+room_version = "2.8.3"
+ksp_version = "2.0.21-1.0.27"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -46,9 +48,14 @@ retrofit-converter-scalars = { module = "com.squareup.retrofit2:converter-scalar
 
 androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
 
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room_version" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room_version" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room_version" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
+devtools = { id = "com.google.devtools.ksp", version.ref = "ksp_version" }
 
