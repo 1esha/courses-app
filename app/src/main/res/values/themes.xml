@@ -10,6 +10,8 @@
         
         <item name="colorOnPrimaryContainer">@color/text_primary</item>
         <item name="colorPrimaryContainer">@color/background_accent</item>
+
+        <item name="colorAccent">@color/primary</item>
     </style>
 
     <style name="Theme.CoursesApp" parent="Base.Theme.CoursesApp" />

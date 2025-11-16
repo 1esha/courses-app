@@ -39,7 +39,20 @@ class HomeFragment : Fragment() {
 
                     when(result) {
                         is Result.Success<*> -> {
-                            installListCourses()
+                            val pair = result.data as Pair<*,*>
+                            when(pair.first as String){
+                                HomeViewModel.TYPE_GET_COURSES -> {
+                                    viewModel.getFavourites()
+
+                                }
+                                HomeViewModel.TYPE_GET_FAVOURITES -> {
+                                    viewModel.setInstallUi()
+                                    installListCourses()
+                                }
+                                HomeViewModel.TYPE_ADD_FAVOURITE -> {}
+                                HomeViewModel.TYPE_REMOVE_FAVOURITE -> {}
+                            }
+
                         }
                         is Result.Error -> {}
                         is Result.Loading -> {}
@@ -61,6 +74,8 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) = with(binding){
 
+        installListCourses()
+
         viewModel.getCourses()
 
         bSort.setOnClickListener {
@@ -73,6 +88,7 @@ class HomeFragment : Fragment() {
 
             viewModel.listCourses = mutableList
 
+            viewModel.setInstallUi()
             installListCourses()
         }
     }
@@ -80,19 +96,23 @@ class HomeFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+        viewModel.setInstallUi()
     }
 
-    private fun installListCourses() = with(binding){
+    private fun installListCourses() = viewModel.installListCourses {
+        with(binding){
+            val mutableListCourses = viewModel.listCourses.toMutableList()
 
-        val mutableListCourses = viewModel.listCourses.toMutableList()
+            rvCoursesHome.adapter = CoursesHomeAdapter(
+                mutableListCourses = mutableListCourses,
+                iconEnable = ContextCompat.getDrawable(requireContext(),R.drawable.ic_bookmark_enable)!!,
+                iconDisable = ContextCompat.getDrawable(requireContext(),R.drawable.ic_bookmark_disable)!!,
+            ) { course ->
 
-        rvCoursesHome.adapter = CoursesHomeAdapter(
-            mutableListCourses = mutableListCourses,
-            iconEnable = ContextCompat.getDrawable(requireContext(),R.drawable.ic_bookmark_enable)!!,
-            iconDisable = ContextCompat.getDrawable(requireContext(),R.drawable.ic_bookmark_disable)!!,
-        ) { id ->
+                viewModel.setFavourite(course = course)
 
+            }
+            rvCoursesHome.layoutManager = LinearLayoutManager(requireContext())
         }
-        rvCoursesHome.layoutManager = LinearLayoutManager(requireContext())
     }
 }

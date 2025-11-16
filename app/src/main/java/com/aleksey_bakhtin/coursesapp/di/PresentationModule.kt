@@ -10,5 +10,12 @@ val presentationModule = module {
 
     viewModel { SignInViewModel() }
 
-    viewModel { HomeViewModel(getListCoursesUseCase = get()) }
+    viewModel {
+        HomeViewModel(
+            getListCoursesUseCase = get(),
+            getListFavouritesUseCase = get(),
+            addFavouriteUseCase = get(),
+            removeFavouriteUseCase = get()
+        )
+    }
 }

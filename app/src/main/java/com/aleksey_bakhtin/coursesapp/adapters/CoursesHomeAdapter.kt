@@ -12,7 +12,7 @@ class CoursesHomeAdapter(
     private val mutableListCourses: MutableList<CourseModel>,
     private val iconEnable: Drawable,
     private val iconDisable: Drawable,
-    private val onClickFavourite:(Int) -> Unit
+    private val onClickFavourite:(CourseModel) -> Unit
 ) : RecyclerView.Adapter<CoursesHomeAdapter.CoursesHomeHolder>() {
 
     class CoursesHomeHolder(val binding: ItemCourseBinding) : RecyclerView.ViewHolder(binding.root)
@@ -45,7 +45,7 @@ class CoursesHomeAdapter(
             )
 
             imHasLike.setOnClickListener {
-                onClickFavourite(currentCourse.id)
+                onClickFavourite(currentCourse)
 
                 mutableListCourses.map {
                     if (it.id == currentCourse.id) it.hasLike = !it.hasLike
