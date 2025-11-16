@@ -7,7 +7,7 @@ data class CourseModel(
     val price: String,
     val rate: Double,
     val startDate: String,
-    val hasLike: Boolean,
+    var hasLike: Boolean,
     val publishDate: String
 )
 

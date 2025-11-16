@@ -13,4 +13,9 @@
     <string name="home">Home</string>
     <string name="favourites">Favourites</string>
     <string name="account">Account</string>
+    <string name="error">Ошибка!</string>
+    <string name="search_courses">Search courses...</string>
+    <string name="by_date_added">По дате добавления</string>
+    <string name="filter">Filter</string>
+    <string name="more_detailed">Подробнее</string>
 </resources>

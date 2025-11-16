@@ -16,6 +16,7 @@ lifecycle_version = "2.9.4"
 koin_version = "2.2.3"
 coroutines_version = "1.10.2"
 retrofit_version = "3.0.0"
+recyclerview = "1.4.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -42,6 +43,8 @@ kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutine
 retrofit = { module = "com.squareup.retrofit2:retrofit",version.ref = "retrofit_version"}
 retrofit-converter-gson = { module = "com.squareup.retrofit2:converter-gson",version.ref = "retrofit_version"}
 retrofit-converter-scalars = { module = "com.squareup.retrofit2:converter-scalars",version.ref = "retrofit_version"}
+
+androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

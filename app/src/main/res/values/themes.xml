@@ -7,6 +7,9 @@
         <item name="colorPrimary">@color/primary</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="colorSecondaryContainer">@color/background_text_input</item>
+        
+        <item name="colorOnPrimaryContainer">@color/text_primary</item>
+        <item name="colorPrimaryContainer">@color/background_accent</item>
     </style>
 
     <style name="Theme.CoursesApp" parent="Base.Theme.CoursesApp" />

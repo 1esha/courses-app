@@ -48,6 +48,9 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.fragment)
 
+    implementation(project(":domain"))
+    implementation(project(":data"))
+
     //Lifecycle
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
@@ -63,6 +66,8 @@ dependencies {
     //Coroutines
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
+
+    implementation(libs.androidx.recyclerview)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
