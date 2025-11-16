@@ -12,6 +12,7 @@
     <string name="forgot_my_password">Забыл пароль</string>
     <string name="home">Home</string>
     <string name="favourites">Favourites</string>
+    <string name="favourites_ru">Избранное</string>
     <string name="account">Account</string>
     <string name="error">Ошибка!</string>
     <string name="search_courses">Search courses...</string>
