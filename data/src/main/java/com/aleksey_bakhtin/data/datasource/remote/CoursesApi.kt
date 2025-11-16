@@ -1,6 +1,6 @@
 package com.aleksey_bakhtin.data.datasource.remote
 
-import com.aleksey_bakhtin.data.datasource.models.DataWithCourses
+import com.aleksey_bakhtin.data.datasource.remote.models.DataWithCourses
 import retrofit2.Response
 import retrofit2.http.GET
 

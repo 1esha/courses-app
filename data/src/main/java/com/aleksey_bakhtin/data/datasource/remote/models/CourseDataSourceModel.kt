@@ -1,4 +1,4 @@
-package com.aleksey_bakhtin.data.datasource.models
+package com.aleksey_bakhtin.data.datasource.remote.models
 
 data class CourseDataSourceModel(
     val id: Int,
